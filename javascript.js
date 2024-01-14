@@ -1,22 +1,38 @@
-// operators: + - * /
-// if operator xyz pressed set operator to symbol
-
-switch(operator){
-    case '+':
-        break;
-    case '-':
-        break;
-    case '*':
-        break;
-    case '/':
-        break;
+function setOperator(operator) {
+    switch(operator){
+        case '+':
+            break;
+        case '-':
+            break;
+        case '*':
+            break;
+        case '/':
+            break;
+    }
 }
 
-// buttons for operators
+// operator buttons
 const addBtn = document.querySelector(".addBtn");
 const subtractBtn = document.querySelector(".subtractBtn");
 const multiplyBtn = document.querySelector(".multiplyBtn");
 const divideBtn = document.querySelector(".divideBtn");
+
+// button eventlisteners
+addBtn = addEventListener("click", () => {
+    setOperator("+");
+})
+
+subtractBtn = addEventListener("click", () => {
+    setOperator("-");
+})
+
+multiplyBtn = addEventListener("click", () => {
+    setOperator("*");
+})
+
+divideBtn = addEventListener("click", () => {
+    setOperator("/");
+})
 
 // can manipulate total until clear is hit
 let total = 0;
