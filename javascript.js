@@ -26,6 +26,13 @@ function getNewNumber() {
     prompt()
 }
 
+const screenBot = document.querySelector(".screen-bot");
+const screenTop = document.querySelector(".screen-top");
+
+const screenBotText = document.createElement("div");
+screenBotText.innerText = "0";
+screenBot.appendChild(screenBotText);
+
 // operator buttons
 const addBtn = document.querySelector(".addBtn");
 const subtractBtn = document.querySelector(".subtractBtn");
@@ -52,6 +59,7 @@ divideBtn = addEventListener("click", () => {
 
 equalBtn = addEventListener("click", () => {
     operator = '=';
+    clearNumber();
 })
 
 // number Buttons
@@ -70,6 +78,7 @@ const pointBtn = document.querySelector(".pointBtn");
 // number btn event listener
 zeroBtn = addEventListener("click", () => {
     numberArray.push("0");
+    screenBot.textContent += 0;
 })
 
 oneBtn = addEventListener("click", () => {
@@ -128,6 +137,7 @@ function setNumber(){
 function clearNumber() {
     numberArray = [];
     newNumber = 0;
+    screenBot.textContent = "";
 }
 
 // set number > set operator > set number > evaluate
