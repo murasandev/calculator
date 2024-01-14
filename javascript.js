@@ -62,7 +62,43 @@ const nineBtn = document.querySelector(".nineBtn");
 
 // number btn event listener
 zeroBtn = addEventListener("click", () => {
+    numberArray.push("0");
+})
 
+oneBtn = addEventListener("click", () => {
+    numberArray.push("1");
+})
+
+twoBtn = addEventListener("click", () => {
+    numberArray.push("2");
+})
+
+threeBtn = addEventListener("click", () => {
+    numberArray.push("3");
+})
+
+fourBtn = addEventListener("click", () => {
+    numberArray.push("4");
+})
+
+fiveBtn = addEventListener("click", () => {
+    numberArray.push("5");
+})
+
+sixBtn = addEventListener("click", () => {
+    numberArray.push("6");
+})
+
+sevenBtn = addEventListener("click", () => {
+    numberArray.push("7");
+})
+
+eightBtn = addEventListener("click", () => {
+    numberArray.push("8");
+})
+
+nineBtn = addEventListener("click", () => {
+    numberArray.push("9");
 })
 
 // clear function: reset total back to 0
@@ -74,10 +110,13 @@ function clear(){
 // set number when operator symbol is clicked
 function setNumber(){
     newNumber = +numberArray.join('');
-    clearNumberArray();
+    clearNumber();
 }
 
 // clear number array when number is set
-function clearNumberArray() {
+function clearNumber() {
     numberArray = [];
+    newNumber = 0;
 }
+
+// set number > set operator > set number > evaluate
