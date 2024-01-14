@@ -30,9 +30,13 @@ const screenBot = document.querySelector(".screen-bot");
 const screenTop = document.querySelector(".screen-top");
 
 const screenBotText = document.createElement("div");
-screenBotText.innerText = "0";
-screenBot.appendChild(screenBotText);
 
+function setTextScreenBot(string) {
+    screenBotText.innerText = `${string}`;
+    screenBot.appendChild(screenBotText);
+}
+
+setTextScreenBot(0);
 // operator buttons
 const addBtn = document.querySelector(".addBtn");
 const subtractBtn = document.querySelector(".subtractBtn");
