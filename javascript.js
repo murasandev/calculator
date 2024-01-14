@@ -1,16 +1,22 @@
 // operators: + - * /
+// if operator xyz pressed set operator to symbol
 
 switch(operator){
     case '+':
-        return;
         break;
     case '-':
-        return;
+        break;
     case '*':
-        return;
+        break;
     case '/':
-        return;
+        break;
 }
+
+// buttons for operators
+const addBtn = document.querySelector(".addBtn");
+const subtractBtn = document.querySelector(".subtractBtn");
+const multiplyBtn = document.querySelector(".multiplyBtn");
+const divideBtn = document.querySelector(".divideBtn");
 
 // can manipulate total until clear is hit
 let total = 0;
