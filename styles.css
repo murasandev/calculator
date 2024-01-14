@@ -5,7 +5,7 @@ body {
 .calculator {
     display: flex;
     flex-direction: column;
-    margin: 75px auto auto;
+    margin: 25px auto auto;
     padding: 15px 15px;
     width: 350px;
     background-color: rgb(47, 151, 125);
@@ -23,10 +23,11 @@ body {
     height: 125px;
     background-color: rgba(0, 0, 0, 0.75);
     margin-bottom: 25px;
-    border-width: 7px;
+    border-width: 3px;
     border-style: inset;
     border-color: black;
     border-radius: 5px;
+    box-shadow: inset 0 5px 5px black;
 }
 
 .button-holder {
@@ -46,7 +47,7 @@ button {
     border-color: rgba(0, 0, 0, 0.5);
     display: flex;
     flex-shrink: 0;
-    border-radius: 15px;
+    border-radius: 5px;
     border-style: solid; 
     border-width: 1px;
     font-size: 20px;
@@ -61,12 +62,30 @@ button {
 }
 
 button:hover {
-    background-color: rgb(79, 189, 162);
+    background-color: rgb(153, 219, 202);
     border-style: solid;
     border-color: rgba(0, 0, 0, 0.3);
     box-shadow: 0 1px 1px black;
     justify-content: center;
     align-self: center;
     color: rgb(0, 103, 77);
+    transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.clearBtn:hover,
+.delBtn:hover {
+    background-color: rgb(255, 82, 82);
+    color: rgb(0, 73, 55);
+    transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.modBtn:hover,
+.addBtn:hover,
+.subtractBtn:hover,
+.multiplyBtn:hover,
+.divideBtn:hover,
+.equalBtn:hover {
+    background-color: rgb(1, 217, 163);
+    color: rgb(0, 73, 55);
     transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
