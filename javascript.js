@@ -1,8 +1,9 @@
 let total = 0;
 let newNumber;
 let numberArray = [];
+let operator;
 
-function setOperator(operator) {
+function evalOperation(operator) {
     switch(operator){
         case '+':
             // after operator selected, input newnumber
@@ -30,22 +31,27 @@ const addBtn = document.querySelector(".addBtn");
 const subtractBtn = document.querySelector(".subtractBtn");
 const multiplyBtn = document.querySelector(".multiplyBtn");
 const divideBtn = document.querySelector(".divideBtn");
+const equalBtn = document.querySelector(".equalBtn");
 
 // button eventlisteners
 addBtn = addEventListener("click", () => {
-    setOperator("+");
+    operator = '+';
 })
 
 subtractBtn = addEventListener("click", () => {
-    setOperator("-");
+    operator = '-';
 })
 
 multiplyBtn = addEventListener("click", () => {
-    setOperator("*");
+    operator = '*';
 })
 
 divideBtn = addEventListener("click", () => {
-    setOperator("/");
+    operator = '/';
+})
+
+equalBtn = addEventListener("click", () => {
+    operator = '=';
 })
 
 // number Buttons
@@ -59,6 +65,7 @@ const sixBtn = document.querySelector(".sixBtn");
 const sevenBtn = document.querySelector(".sevenBtn");
 const eightBtn = document.querySelector(".eightBtn");
 const nineBtn = document.querySelector(".nineBtn");
+const pointBtn = document.querySelector(".pointBtn");
 
 // number btn event listener
 zeroBtn = addEventListener("click", () => {
@@ -101,8 +108,12 @@ nineBtn = addEventListener("click", () => {
     numberArray.push("9");
 })
 
+pointBtn = addEventListener("click", () => {
+    numberArray.push(".");
+})
+
 // clear function: reset total back to 0
-function clear(){
+function clearTotal(){
     return total = 0;
 }
 
