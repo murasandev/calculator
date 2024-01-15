@@ -22,47 +22,54 @@ function evalOperation(operator) {
     }
 }
 
-function getNewNumber() {
-    prompt()
-}
-
 const screenBot = document.querySelector(".screen-bot");
 const screenTop = document.querySelector(".screen-top");
 
 const screenBotText = document.createElement("div");
 
 function setTextScreenBot(string) {
+    string = numberArray.join("");
     screenBotText.innerText = `${string}`;
     screenBot.appendChild(screenBotText);
 }
 
-setTextScreenBot(0);
+function resetScreen() {
+    screenBotText.innerText = `${0}`;
+    screenBot.appendChild(screenBotText);
+}
+
+resetScreen();
+
 // operator buttons
 const addBtn = document.querySelector(".addBtn");
 const subtractBtn = document.querySelector(".subtractBtn");
 const multiplyBtn = document.querySelector(".multiplyBtn");
 const divideBtn = document.querySelector(".divideBtn");
 const equalBtn = document.querySelector(".equalBtn");
-
+const clearBtn = document.querySelector(".clearBtn");
 // button eventlisteners
-addBtn = addEventListener("click", () => {
+addBtn.addEventListener("click", () => {
     operator = '+';
-})
+});
 
-subtractBtn = addEventListener("click", () => {
+subtractBtn.addEventListener("click", () => {
     operator = '-';
-})
+});
 
-multiplyBtn = addEventListener("click", () => {
+multiplyBtn.addEventListener("click", () => {
     operator = '*';
-})
+});
 
-divideBtn = addEventListener("click", () => {
+divideBtn.addEventListener("click", () => {
     operator = '/';
-})
+});
 
-equalBtn = addEventListener("click", () => {
+equalBtn.addEventListener("click", () => {
     operator = '=';
+    clearNumber();
+});
+
+clearBtn.addEventListener("click", () => {
     clearNumber();
 })
 
@@ -80,49 +87,59 @@ const nineBtn = document.querySelector(".nineBtn");
 const pointBtn = document.querySelector(".pointBtn");
 
 // number btn event listener
-zeroBtn = addEventListener("click", () => {
+zeroBtn.addEventListener("click", () => {
     numberArray.push("0");
-    screenBot.textContent += 0;
+    setTextScreenBot();
 })
 
-oneBtn = addEventListener("click", () => {
+oneBtn.addEventListener("click", () => {
     numberArray.push("1");
+    setTextScreenBot();
 })
 
-twoBtn = addEventListener("click", () => {
+twoBtn.addEventListener("click", () => {
     numberArray.push("2");
+    setTextScreenBot();
 })
 
-threeBtn = addEventListener("click", () => {
+threeBtn.addEventListener("click", () => {
     numberArray.push("3");
+    setTextScreenBot();
 })
 
-fourBtn = addEventListener("click", () => {
+fourBtn.addEventListener("click", () => {
     numberArray.push("4");
+    setTextScreenBot();
 })
 
-fiveBtn = addEventListener("click", () => {
+fiveBtn.addEventListener("click", () => {
     numberArray.push("5");
+    setTextScreenBot();
 })
 
-sixBtn = addEventListener("click", () => {
+sixBtn.addEventListener("click", () => {
     numberArray.push("6");
+    setTextScreenBot();
 })
 
-sevenBtn = addEventListener("click", () => {
+sevenBtn.addEventListener("click", () => {
     numberArray.push("7");
+    setTextScreenBot();
 })
 
-eightBtn = addEventListener("click", () => {
+eightBtn.addEventListener("click", () => {
     numberArray.push("8");
+    setTextScreenBot();
 })
 
-nineBtn = addEventListener("click", () => {
+nineBtn.addEventListener("click", () => {
     numberArray.push("9");
+    setTextScreenBot();
 })
 
-pointBtn = addEventListener("click", () => {
+pointBtn.addEventListener("click", () => {
     numberArray.push(".");
+    setTextScreenBot();
 })
 
 // clear function: reset total back to 0
@@ -141,7 +158,8 @@ function setNumber(){
 function clearNumber() {
     numberArray = [];
     newNumber = 0;
-    screenBot.textContent = "";
+    setTextScreenBot();
+    resetScreen(0);
 }
 
 // set number > set operator > set number > evaluate
