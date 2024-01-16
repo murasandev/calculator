@@ -47,12 +47,14 @@ body {
     margin-right: 20px;
     color: white;
     font-size: 24px;
+    height: 30px;
 }
 
 .screen-bot {
     margin-right: 20px;
     color: white;
     font-size: 48px;
+    height: 60px;
 }
 
 .button-holder {
