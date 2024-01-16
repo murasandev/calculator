@@ -241,4 +241,8 @@ function setOperator(){
 function setTotal(){
     screenBotText.innerText = `${total}`;
     screenBot.appendChild(screenBotText);
+    
+    equation.total = total;
+    equation.operator = '';
+    equation.number = '';
 }
