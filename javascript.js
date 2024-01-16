@@ -52,6 +52,10 @@ function resetScreen() {
     screenTopText.innerText = '';
     screenBot.appendChild(screenBotText);
     screenTop.appendChild(screenTopText);
+
+    equation.total = '';
+    equation.operator = '';
+    equation.number = '';
 }
 
 resetScreen();
