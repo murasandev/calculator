@@ -81,6 +81,7 @@ addBtn.addEventListener("click", () => {
         setOperator();
     }      
     else setOperator();
+    resetDecimalBool();
 });
 
 subtractBtn.addEventListener("click", () => {
@@ -90,6 +91,7 @@ subtractBtn.addEventListener("click", () => {
         setOperator();
     }      
     else setOperator();
+    resetDecimalBool();
 });
 
 multiplyBtn.addEventListener("click", () => {
@@ -99,6 +101,7 @@ multiplyBtn.addEventListener("click", () => {
         setOperator();
     }      
     else setOperator();
+    resetDecimalBool();
 });
 
 divideBtn.addEventListener("click", () => {
@@ -108,6 +111,7 @@ divideBtn.addEventListener("click", () => {
         setOperator();
     }      
     else setOperator();
+    resetDecimalBool();
 });
 
 modBtn.addEventListener("click", () => {
@@ -117,6 +121,7 @@ modBtn.addEventListener("click", () => {
         setOperator();
     }      
     else setOperator();
+    resetDecimalBool();
 })
 
 equalBtn.addEventListener("click", () => {
@@ -125,10 +130,12 @@ equalBtn.addEventListener("click", () => {
     evalEquation();
     setTotal();
     console.log(total);
+    resetDecimalBool();
 });
 
 clearBtn.addEventListener("click", () => {
     resetScreen();
+    resetDecimalBool();
 })
 
 delBtn.addEventListener("click", () => {
@@ -261,4 +268,8 @@ function checkDecimal() {
         digitArray.push(".");
         setTextScreenBot();
     }
+}
+
+function resetDecimalBool() {
+    decimalBool = true;
 }
