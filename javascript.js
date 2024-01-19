@@ -24,6 +24,9 @@ function evalEquation() {
         case '/':
             total = +equation.total / +equation.number;
             break;
+        case '%':
+            total = +equation.total % +equation.number;
+            break;
     }
 }
 
@@ -65,6 +68,7 @@ const addBtn = document.querySelector(".addBtn");
 const subtractBtn = document.querySelector(".subtractBtn");
 const multiplyBtn = document.querySelector(".multiplyBtn");
 const divideBtn = document.querySelector(".divideBtn");
+const modBtn = document.querySelector(".modBtn");
 const equalBtn = document.querySelector(".equalBtn");
 const clearBtn = document.querySelector(".clearBtn");
 const delBtn = document.querySelector(".delBtn");
@@ -72,8 +76,11 @@ const delBtn = document.querySelector(".delBtn");
 // button eventlisteners
 addBtn.addEventListener("click", () => {
     operator = '+';   
-    setNumber();   
-    setOperator();
+    if(equation.operator === ''){
+        setNumber();   
+        setOperator();
+    }      
+    else setOperator();
 });
 
 subtractBtn.addEventListener("click", () => {
@@ -102,6 +109,15 @@ divideBtn.addEventListener("click", () => {
     }      
     else setOperator();
 });
+
+modBtn.addEventListener("click", () => {
+    operator = '%';
+    if(equation.operator === ''){
+        setNumber();   
+        setOperator();
+    }      
+    else setOperator();
+})
 
 equalBtn.addEventListener("click", () => {
     operator = '=';
