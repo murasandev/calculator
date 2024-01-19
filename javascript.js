@@ -67,6 +67,7 @@ const multiplyBtn = document.querySelector(".multiplyBtn");
 const divideBtn = document.querySelector(".divideBtn");
 const equalBtn = document.querySelector(".equalBtn");
 const clearBtn = document.querySelector(".clearBtn");
+const delBtn = document.querySelector(".delBtn");
 
 // button eventlisteners
 addBtn.addEventListener("click", () => {
@@ -117,6 +118,11 @@ equalBtn.addEventListener("click", () => {
 
 clearBtn.addEventListener("click", () => {
     resetScreen();
+})
+
+delBtn.addEventListener("click", () => {
+    digitArray.pop();
+    setTextScreenBot();
 })
 
 // number Buttons
