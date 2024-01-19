@@ -248,12 +248,17 @@ function setTotal(){
     equation.number = '';
 }
 
+let decimalBool = true;
 // check for decimal point
 function checkDecimal() {
-    numArray.forEach((item, index, array) => {
-        if(item === '.') return;
+    digitArray.forEach((item, index, array) => {
+        if(item === '.') {
+            decimalBool = false;
+        }
     })
 
-    digitArray.push(".");
-    setTextScreenBot();
+    if (decimalBool) {
+        digitArray.push(".");
+        setTextScreenBot();
+    }
 }
