@@ -72,11 +72,6 @@ const delBtn = document.querySelector(".delBtn");
 // button eventlisteners
 addBtn.addEventListener("click", () => {
     operator = '+';   
-    // if(typeof numArray[numArray.length - 1] === 'number' || equation.operator === ''){
-    //     setNumber();   
-    //     setOperator();
-    // }      
-    // else setOperator();
     setNumber();   
     setOperator();
 });
@@ -202,17 +197,6 @@ function clearNumber() {
     resetScreen(0);
 }
 
-// set two arrays one for numbers and one for operator
-// whenever an operator function or equal is clicked
-// print through both arrays
-// ex. 
-// arrayNumber = [1, 4, 6, 7]
-// arrayOperator = [+, -, *, =]
-// return 1 + 4 - 6 * 7 =
-
-// if numArr.length === opArr.length 
-// opArr[length - 1] = current operator
-
 // use when operator symbols are used
 function setNumber() {
     newNumber = digitArray.join("");
@@ -228,7 +212,6 @@ function setNumber() {
 
     console.log(numArray);
     digitArray = [];
-    // may need to move bottom line
     setTextScreenTop();
 }
 
@@ -239,13 +222,6 @@ function setOperator(){
         numArray.push(operator);
         setTextScreenTop();
     }
-    // else {
-    //     equation.operator = operator;
-    //     console.log(`equation operator is ${equation.operator}`);
-    //     delete numArray[numArray.length - 1];
-    //     numArray.push(operator);
-    //     setTextScreenTop();
-    // }
 }
 
 function setTotal(){
