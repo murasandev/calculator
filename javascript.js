@@ -201,8 +201,7 @@ nineBtn.addEventListener("click", () => {
 })
 
 pointBtn.addEventListener("click", () => {
-    digitArray.push(".");
-    setTextScreenBot();
+    checkDecimal();
 })
 
 // clear number array when number is set
@@ -247,4 +246,14 @@ function setTotal(){
     equation.total = total;
     equation.operator = '';
     equation.number = '';
+}
+
+// check for decimal point
+function checkDecimal() {
+    numArray.forEach((item, index, array) => {
+        if(item === '.') return;
+    })
+
+    digitArray.push(".");
+    setTextScreenBot();
 }
