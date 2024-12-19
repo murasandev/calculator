@@ -73,7 +73,7 @@ const equalBtn = document.querySelector(".equalBtn");
 const clearBtn = document.querySelector(".clearBtn");
 const delBtn = document.querySelector(".delBtn");
 
-// button eventlisteners
+// button eventlisteners d
 addBtn.addEventListener("click", () => {
     operator = '+';   
     if(equation.operator === ''){
